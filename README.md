@@ -22,3 +22,12 @@ Statistics Dashboard: The extension provides a dashboard with statistics on page
 
 How It Works
 The detector uses a combination of techniques to assess the legitimacy of a website. When you navigate to a new page, the extension's script analyzes the URL and page content using a pre-trained machine learning model. This model looks for a variety of indicators that are commonly associated with phishing sites. For example, it might identify that a site's URL has an unusually high number of dots or that the page is asking for sensitive information like a password without a secure connection (HTTPS). Based on this analysis, it assigns a risk score and takes action: blocking the site, issuing a warning, or doing nothing.
+
+
+**TEAM DETAILS**
+  **TEAM LEADER**
+    NAVISH BHARTI
+  **TEAM MEMBERS**
+    DEVANSH SHANKHDHAR
+    SARTHAK TIWARI
+    RIDDHIMA GUPTA
