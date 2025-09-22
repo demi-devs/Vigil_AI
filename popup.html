@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 350px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .status {
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .status.enabled {
+      background: #2ecc71;
+      color: white;
+    }
+    .status.disabled {
+      background: #e74c3c;
+      color: white;
+    }
+    .section {
+      margin-bottom: 15px;
+    }
+    .section-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    select, input {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    button {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: #3498db;
+      color: white;
+    }
+    .btn-secondary {
+      background: #95a5a6;
+      color: white;
+    }
+    .stats {
+      background: #f8f9fa;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h2>AI Phishing Detector</h2>
+  </div>
+  
+  <div id="status" class="status enabled">Protection Enabled</div>
+  
+  <div class="section">
+    <div class="section-title">Sensitivity Level</div>
+    <select id="sensitivity">
+      <option value="low">Low</option>
+      <option value="medium" selected>Medium</option>
+      <option value="high">High</option>
+    </select>
+  </div>
+  
+  <div class="section">
+    <div class="section-title">Quick Actions</div>
+    <button id="toggleProtection" class="btn btn-secondary">Disable Protection</button>
+    <button id="viewWhitelist" class="btn btn-primary">Manage Whitelist</button>
+    <button id="viewStats" class="btn btn-primary">View Statistics</button>
+  </div>
+  
+  <div class="section">
+    <div class="section-title">Current Page</div>
+    <div id="currentPageInfo">No active page</div>
+    <button id="whitelistCurrent" class="btn btn-primary">Whitelist This Site</button>
+    <button id="blacklistCurrent" class="btn btn-secondary">Blacklist This Site</button>
+  </div>
+  
+  <div class="section">
+    <div class="section-title">Statistics</div>
+    <div class="stats">
+      <div>Pages Checked: <span id="checkedCount">0</span></div>
+      <div>Threats Blocked: <span id="blockedCount">0</span></div>
+      <div>Warnings Issued: <span id="warnedCount">0</span></div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
